@@ -2,13 +2,13 @@
 import Layout from '@/layouts/Layout.astro'
 import { Image } from 'astro:assets'
 import { InputWithButton } from '@/components/InputWithButton'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 ---
 
 <Layout title="email-subscribe">
   <!-- background containter -->
-  <div
-    class="flex min-h-screen flex-col items-center justify-center bg-zinc-700"
-  >
+  <div class="flex min-h-screen items-center justify-center bg-zinc-700">
     <!-- Card -->
     <div class="flex flex-col rounded-xl bg-zinc-800 p-2 md:flex-row">
       <!-- image -->
@@ -33,7 +33,7 @@ import { InputWithButton } from '@/components/InputWithButton'
           <input
             type="text"
             placeholder="Enter your email address"
-            class="border border-zinc-600 bg-zinc-800 p-2 px-4 text-center text-white placeholder:text-center placeholder:text-xs focus:outline-none md:text-left placeholder:md:text-left"
+            class="border border-zinc-600 bg-zinc-800 p-2 px-4 text-center text-white placeholder:text-center placeholder:text-xs focus:outline-none md:flex-1 md:text-left placeholder:md:text-left"
           />
 
           <button
