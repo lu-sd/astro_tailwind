@@ -1,0 +1,45 @@
+---
+import { Separator } from '@/components/ui/separator'
+import { Icon } from 'astro-icon'
+
+interface Props {
+  price: string
+}
+
+const { price } = Astro.props
+---
+
+<div class="rounded-xl bg-slate-700 text-white">
+  <!-- top container -->
+  <div class="mx-3 mt-3 rounded-t-xl bg-slate-800 p-8 text-center text-white">
+    <div class="uppercase">{price}</div>
+    <div class="mt-10 font-serif text-5xl">100GB</div>
+    <div class="mt-2">$1.99/month</div>
+    <a
+      href="#"
+      class="my-6 block rounded-lg border border-violet-600 py-3 duration-200 hover:border-violet-800 hover:bg-violet-800"
+    >
+      Purchase
+    </a>
+    <Separator />
+  </div>
+  <!-- bottom container -->
+  <div class="mx-3 mb-3 rounded-b-xl bg-slate-800 p-8 pt-0">
+    <Icon name="mdi:check" class="inline-block h-6 w-6" /><span
+      class="ml-1 text-sm"
+    >
+      100 GB of storage
+    </span><br />
+
+    <Icon name="mdi:check" class="inline-block h-6 w-6" /><span
+      class="ml-1 text-sm"
+    >
+      100 GB of storage
+    </span><br />
+    <Icon name="mdi:check" class="inline-block h-6 w-6" /><span
+      class="ml-1 text-sm"
+    >
+      100 GB of storage
+    </span><br />
+  </div>
+</div>

@@ -1,0 +1,15 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import PriceCard from '@/components/priceCard.astro'
+---
+
+<Layout title="email-subscribe">
+  <!-- background containter -->
+  <div
+    class="flex min-h-screen flex-col items-center justify-center space-y-4 bg-zinc-700 md:flex-row md:space-x-4 md:space-y-0"
+  >
+    <PriceCard price="Basic" />
+    <PriceCard price="stand" />
+    <PriceCard price="premium" />
+  </div>
+</Layout>
