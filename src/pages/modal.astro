@@ -1,0 +1,56 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import productImage from '@/assets/headphone.png'
+import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { ShoppingCart, Heart } from 'lucide-react'
+---
+
+<Layout title="product-modal">
+  <div class="flex min-h-screen items-center justify-center bg-slate-200">
+    <Card
+      className="m-3 p-6 flex flex-col space-y-5 items-center md:flex-row md:items-start md:space-y-0 md:space-x-5 "
+    >
+      <Image
+        class="w-60 duration-200 hover:scale-105"
+        src={productImage}
+        alt="headphone"
+        format="avif"
+      />
+
+      <div class="flex flex-col space-y-2 text-center md:text-left">
+        <Badge className="self-center md:self-start">Free shipping</Badge>
+        <div class="max-w-sm text-2xl font-medium">
+          Razer Kraken Kitty Edt Gaming Headset Quartz
+        </div>
+        <p class="line-through">$799</p>
+        <p class="text-5xl font-bold">$599</p>
+        <p class="text-sm font-light text-gray-400">
+          This offer is valid until April 3rd or as long as stock lasts!
+        </p>
+        <Button className="w-2/3 mx-auto md:mx-0" size="sm" variant="headphone">
+          Add to cart
+        </Button>
+        <div class="group">
+          <div
+            class="mx-1 inline-block self-start rounded-full bg-green-400 p-1 group-hover:animate-ping"
+          >
+          </div>
+          <span class="text-sm">50+ pcs. in stock</span>
+        </div>
+        <div
+          class="flex flex-col space-y-3 md:flex-row md:space-x-3 md:space-y-0"
+        >
+          <Button className="" variant="outline">
+            <ShoppingCart className="mr-2 h-4 w-4" /> Add to cart
+          </Button>
+          <Button className="" variant="outline">
+            <Heart className="mr-2 h-4 w-4" /> Add to wishlist
+          </Button>
+        </div>
+      </div>
+    </Card>
+  </div>
+</Layout>
