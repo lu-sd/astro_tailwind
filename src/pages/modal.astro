@@ -11,7 +11,7 @@ import { ShoppingCart, Heart } from 'lucide-react'
 <Layout title="product-modal">
   <div class="flex min-h-screen items-center justify-center bg-slate-200">
     <Card
-      className="m-3 p-6 flex flex-col space-y-5 items-center md:flex-row md:items-start md:space-y-0 md:space-x-5 "
+      className=" m-3 flex flex-col items-center space-y-5 p-6 md:flex-row md:items-start md:space-x-5 md:space-y-0"
     >
       <Image
         class="w-60 duration-200 hover:scale-105"
@@ -30,7 +30,7 @@ import { ShoppingCart, Heart } from 'lucide-react'
         <p class="text-sm font-light text-gray-400">
           This offer is valid until April 3rd or as long as stock lasts!
         </p>
-        <Button className="w-2/3 mx-auto md:mx-0" size="sm" variant="headphone">
+        <Button className="mx-auto w-2/3 md:mx-0" size="sm" variant="headphone">
           Add to cart
         </Button>
         <div class="group">
@@ -43,10 +43,10 @@ import { ShoppingCart, Heart } from 'lucide-react'
         <div
           class="flex flex-col space-y-3 md:flex-row md:space-x-3 md:space-y-0"
         >
-          <Button className="" variant="outline">
+          <Button variant="outline">
             <ShoppingCart className="mr-2 h-4 w-4" /> Add to cart
           </Button>
-          <Button className="" variant="outline">
+          <Button variant="outline">
             <Heart className="mr-2 h-4 w-4" /> Add to wishlist
           </Button>
         </div>
